@@ -7,7 +7,6 @@
   "author": "Tetsunori NAKAYAMA",
   "license": "MIT",
   "dependencies": {
-    "@toio/device-core-cube": "*",
     "@toio/scanner": "*",
     "express": "^4.16.4",
     "socket.io": "^2.1.1",
