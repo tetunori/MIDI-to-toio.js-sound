@@ -1,0 +1,117 @@
+
+/* Overall, body */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+       -o-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color:#eee;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+}
+
+/* On table in contents */
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* On dropify */
+div.dropify-wrapper{
+  margin-top: 12px;
+}
+
+/* Pretty printing styles. Used with prettify.js. */
+pre.prettyprint {
+	padding: 0px;
+  border: 1px solid #E5E5E5;
+	font-size:12px;
+	font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+	overflow: auto;
+	tab-size: 4;
+  height:20em;
+  background-color:#eee;
+  margin-bottom: 0em;
+}
+
+pre.prettyprint .str { color: #800; }
+pre.prettyprint .kwd { color: #00c; }
+pre.prettyprint .com { color: #080; }
+pre.prettyprint .typ { color: #606; }
+pre.prettyprint .lit { color: #066; }
+pre.prettyprint .pun { color: #660; }
+pre.prettyprint .pln { color: #000; }
+pre.prettyprint .tag { color: #008; }
+pre.prettyprint .atn { color: #606; }
+pre.prettyprint .atv { color: #080; }
+pre.prettyprint .dec { color: #606; }
+
+/* Specify class=linenums on a pre to get line numbering */
+pre.prettyprint ol.linenums {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0px 0px 0px 4em;
+    background-color: rgb(235, 240, 255);
+    line-height: 1em;
+} /* IE indents via margin-left */
+
+pre.prettyprint li
+{
+    padding: 2px;
+    padding-left: 5px;
+}
+
+pre.prettyprint li:nth-child(odd)
+{
+    background: rgb(255,255,255);
+}
+
+pre.prettyprint li:nth-child(even)
+{
+    background: rgb(250,250,250);
+}
+
+pre.prettyprint li.hilight {
+  background-color: hsla(220, 100%, 80%, 0.25);
+}
+
+@media print {
+  .str { color: #060; }
+  .kwd { color: #006; font-weight: bold; }
+  .com { color: #600; font-style: italic; }
+  .typ { color: #404; font-weight: bold; }
+  .lit { color: #044; }
+  .pun { color: #440; }
+  .pln { color: #000; }
+  .tag { color: #006; font-weight: bold; }
+  .atn { color: #404; }
+  .atv { color: #060; }
+}
+
+ol.linenums{
+    counter-reset:linenumber;
+}
+ol.linenums li{
+    list-style-type:none;
+    counter-increment:linenumber;
+}
+ol.linenums li:before{
+    content: counter(linenumber);
+    float:left;
+    margin-left:-4em;
+    text-align:right;
+    width:3em;
+}

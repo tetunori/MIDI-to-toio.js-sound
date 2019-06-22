@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "version": "0.8.0",
+  "name": "midi-to-toio.js-sound",
+  "description": "This converts MIDI sound data to toio.js sound and we can check the converted data with actual device.",
+  "main": "index.js",
+  "author": "Tetsunori NAKAYAMA",
+  "license": "MIT",
+  "dependencies": {
+    "@toio/device-core-cube": "*",
+    "@toio/scanner": "*",
+    "express": "^4.16.4",
+    "socket.io": "^2.1.1",
+    "midievents": "^2.0.0",
+    "midifile": "^2.0.0"
+  }
+}

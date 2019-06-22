@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MIDI to toio.js Sound Converter</title>
+
+    <!-- Material Design & stylesheet -->
+    <link href="https://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Code prettify -->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    <!-- Socket communication with node.js server -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- dropify(overrides file input) -->
+    <link rel='stylesheet' href='http://cdn.rawgit.com/JeremyFagis/dropify/master/dist/css/dropify.min.css' />  
+    <script src='http://cdn.rawgit.com/JeremyFagis/dropify/master/dist/js/dropify.js'></script>
+  </head>
+
+  <body>
+    <!-- Header part -->
+    <header class="mui-appbar mui--z1">
+      <div class="mui-container">
+        <table>
+          <tr class="mui--appbar-height">
+            <td class="mui--text-title">MIDI to toio.js Sound Converter</td>
+          </tr>
+        </table>
+      </div>
+    </header>
+
+    <!-- Body part -->
+    <div id="content-wrapper" class="mui--text-center">
+      <div class="mui--appbar-height"></div>
+      <br>
+      <div class="mui-container">
+      <div class="mui-panel">
+        <table class="mui-table"><tbody>
+          <tr>
+            <td align="left" valign="top">
+              <div class="mui--text-headline">1. Select/Drag&Drop a MIDI file.</div>
+              <div class="mui--text-dark-secondary mui--text-caption">Support single track MIDI format only.</div>
+              <input type="file" accept="audio/mid" class="dropify" id="fileSelector" />  
+            </td>
+            <td rowspan="2" align="left" valign="top">
+              <div class="mui--text-headline">3. Use the converted melody for toio.js</div>
+              <div class="mui--text-dark-secondary mui--text-caption">Set this array object into the 1st argument of Cube's playSound() API.</div>
+              <pre id="output" class="prettyprint lang-js"></pre>
+              <div align="right">
+                <button class="mui-btn mui-btn--small" disabled id="copyCode">Copy code</button>
+                <div class="mui--text-accent" id="copiedText" style='visibility:hidden;'>COPIED!</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" valign="top">
+              <div class="mui--text-headline">2. Check the sound with Cube.</div>
+              <div class="mui--text-dark-secondary mui--text-caption">2-1. Turn a toio™ Core Cube on.</div>
+              <div class="mui--text-dark-secondary mui--text-caption">2-2. Push [CONNECT]/[PLAY] buttons one by one.</div>
+              <div align="right">
+                <button class="mui-btn mui-btn--primary" id="connect">CONNECT</button>
+                <button class="mui-btn mui-btn--primary" disabled id="playSound">PLAY</button>
+                <button class="mui-btn mui-btn--accent" disabled id="stopSound">STOP</button>
+              </div>
+            </td>
+          </tr>
+        </tbody></table>
+      </div>
+      </div>
+    </div>
+
+    <!-- javascript part -->
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
