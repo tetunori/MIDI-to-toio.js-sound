@@ -1,4 +1,4 @@
-# MIDI to toio.js sound converter
+# MIDI to toio.js Sound Converter
 A tool for converting a MIDI data to [toio.js](https://github.com/toio/toio.js) melody code.   
 In addition, we can also check the conveted sound via toio™ Core Cube, directly.   
 ![Screen shot](https://github.com/tetunori/MIDI-to-toio.js-sound/raw/assets/screenshot.png)  
