@@ -15,7 +15,7 @@ const MIDIEvents = require("midievents");
 ///   Definitions    ///
 ////////////////////////
 // It seems toio.js or cube limitation
-const MELODY_LENGTH_MAX = 59;
+const MELODY_LENGTH_MAX = 58;
 const NOTE_OFF_NUMBER = 127;
 
 var convertedData = null;
